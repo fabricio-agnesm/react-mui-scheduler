@@ -138,7 +138,7 @@ function Scheduler(props) {
       // Add days of precedent month
       // If Sunday is the first day of week, apply b <= monthStartDay
       // and days: (monthStartDay-b) + 1
-      for (let i = 1; checkCondition(i); i++) {
+      for (let i = 0; checkCondition(i); i++) {
         let subDate = sub(
           monthStartDate,
           {days: monthStartDay - i + (startOnSunday ? 1 : 0)}
